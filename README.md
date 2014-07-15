@@ -23,3 +23,13 @@
     install : 安装，本应用安装后的一次性操作
     uninstall: 卸载，本应用被卸载前的一次性操作
 </pre>
+
+## 已有的应用程序列表
+
+### [hdns](https://github.com/modouwifi/hdns)
+
+魔豆上的高级 DNS
+
+### [modou-samba](https://github.com/modouwifi/modou-samba)
+
+魔豆上的 Samba 文件共享
