@@ -34,6 +34,7 @@
 <pre>
 {
     "package_id"      : "com.modou.sample",       // 应用ID
+    "name"            : "welcome-page",           // 应用的名字
     "author"          : "魔豆开发团队",           // 应用作者
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
