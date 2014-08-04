@@ -33,14 +33,16 @@
 * manifest.json文件包含本APP的ID和相关信息, 相关字段参见下文样例：
 <pre>
 {
-  "package_id"      : "com.modou.sample",       // 应用ID
-  "author"          : "魔豆开发团队",           // 应用作者
-  "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
-  "homepage"        : "www.modouwifi.com",      // 应用相关的网页
-  "version"         : "0.1",                    // 当前应用版本
-  "release_date"    : "2014.08.08",             // 应用发布日期
-  "icon"            : "./res/icon_111X111.png", // 图标文件
-  "location"        : "external"                // 安装位置 (internal,external,both)
+    "package_id"      : "com.modou.sample",       // 应用ID
+    "author"          : "魔豆开发团队",           // 应用作者
+    "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
+    "homepage"        : "www.modouwifi.com",      // 应用相关的网页
+    "version"         : "0.1",                    // 当前应用版本
+    "release_date"    : "2014.08.08",             // 应用发布日期
+    "icon"            : "./res/icon_111X111.png", // 图标文件
+    "location"        : "external",               // 安装位置 (internal,external,both)
+    "description"     : "这是一个样例",           // 应用的描述
+    "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
 }
 </pre>
 
