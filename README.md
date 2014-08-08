@@ -60,3 +60,30 @@
 ### [modou-samba](https://github.com/modouwifi/modou-samba)
 
 魔豆上的 Samba 文件共享
+
+## 让图标显示在Launcher界面的方法
+
+Launcher程序读去配置文件，并且在用户点击 ICON 时执行命令。
+### 1. 配置文件的格式
+    以 JSON 配置格式，每个文件对应一个程序。
+```js
+{
+    "name" : "AppName",
+    "icon" : "/path/icon.png",
+    "iconPressed" : "/patb/icon_p.png",
+    "exec" : "/path/app",
+    "msgNum" : 4
+}
+ ```
+
+### 2. 配置文件的命名。
+        1) 必须有 .conf 后缀.
+        2) 尽量以程序名字+.conf 作为文件名，避免与其他程序的配置文件冲突。
+
+### 3. 配置文件的目录。
+       配置文件放在  /data/conf/launcher/conf.d  目录。
+       从这个目录删除配置文件，Launcher不再显示相应的图标。
+  
+### 4. 图标规格:
+    111 × 111
+    不符合规格的图片显示不了。
