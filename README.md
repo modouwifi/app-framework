@@ -43,7 +43,7 @@
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
     "version"         : "0.1",                    // 当前应用版本
-    "os_version"      : "0.5.28"                  // 依赖的系统版本
+    "os_version"      : "0.5.28",                 // 依赖的系统版本
     "release_date"    : "2014.08.08",             // 应用发布日期
     "icon"            : "./res/icon_111X111.png", // 图标文件
     "location"        : "external",               // 安装位置 (internal,external,both)
