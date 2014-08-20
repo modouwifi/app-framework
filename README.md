@@ -68,6 +68,16 @@
         }
         ...
     }
+    ret_msgs : {                                 // 执行命令返回的结果
+        {
+            "msg" : "do command success"
+            "code" : 0
+        }
+        {
+            "msg" : "bad parameter"
+        }
+        ...
+    }
   },
   {
     "action": "背光长亮",
@@ -96,7 +106,7 @@
 
 ## 让图标显示在Launcher界面的方法
 
-Launcher程序读去配置文件，并且在用户点击 ICON 时执行命令。
+Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 时执行命令。
 ### 1. 配置文件的格式
     以 JSON 配置格式，每个文件对应一个程序。
 ```js
