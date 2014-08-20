@@ -55,40 +55,51 @@
 ```js
 [
   {
-    "action": "背光熄灭",                        // 类似于 Button Text 
-    "command_name": "rlease_backlight",          // 类似于 start, stop 这样的名字
-    "args": {                                    // 命令参数(e.g, init cmd Count=12 FileName="file")
-        {
+    "action": "背光设置",
+    "type": "group",
+    "nodes": [
+      {
+        "action": "背光熄灭",
+        "type": "command",
+        "command_name": "rlease_backlight",
+        "args": [
+          {
             "name": "FileName",
-            "type": "number"                     //参数类型 (number, string, boolean)
-        },
-        {
+            "type": "number"
+          },
+          {
             "name": "Count",
             "type": "number"
-        }
-        ...
-    },
-    "ret_msgs" : {                                 // 执行命令返回的结果
-        {
-            "msg" : "do command success"
-            "code" : 0
-        },
-        {
-            "msg" : "bad parameter"
-            "code" : 1
-        }
-        ...
-    }
+          }
+        ],
+        "ret_msgs": [
+          {
+            "msg": "do command success",
+            "code": 0
+          },
+          {
+            "msg": "do command failure",
+            "code": -1
+          }
+        ]
+      },
+      {
+        "action": "背光长亮",
+        "type": "command",
+        "command_name": "lock_backlight"
+      }
+    ]
   },
   {
-    "action": "背光长亮",
-    "command_name": "lock_backlight",
-    "args": {                                   // 参数可以是空的，即没有参数
-    },
-    "ret_msgs" : {
-    }
+    "action": "开启背光",
+    "type": "command",
+    "command_name": "backlight_on"
+  },
+  {
+    "action": "关闭背光",
+    "type": "command",
+    "command_name": "backlight_off"
   }
-  ... 
 ]
 ```
 
