@@ -67,14 +67,15 @@
             "type": "number"
         }
         ...
-    }
-    ret_msgs : {                                 // 执行命令返回的结果
+    },
+    "ret_msgs" : {                                 // 执行命令返回的结果
         {
             "msg" : "do command success"
             "code" : 0
-        }
+        },
         {
             "msg" : "bad parameter"
+            "code" : 1
         }
         ...
     }
@@ -83,6 +84,8 @@
     "action": "背光长亮",
     "command_name": "lock_backlight",
     "args": {                                   // 参数可以是空的，即没有参数
+    },
+    "ret_msgs" : {
     }
   }
   ... 
