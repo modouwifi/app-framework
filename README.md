@@ -66,6 +66,7 @@
             "name": "Count",
             "type": "number"
         }
+        ...
     }
   },
   {
