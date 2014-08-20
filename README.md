@@ -19,9 +19,10 @@
 ./___
     |--init
     |--manifest.json
+    |--extern_cmd.json               // 可选的，没有扩展命令可以不提供这个文件
 ```
 
-* init脚本应能够接受以下参数并实现对应的操作：
+* init 必须接受以下命令。extern_cmd.json 文件中描述可接受的扩展命令。
 
 ```
     start       : 启动，实现启动本应用的操作
@@ -32,23 +33,48 @@
     uninstall   : 卸载，本应用被卸载前的一次性操作
 ```
 
-* manifest.json文件包含本APP的ID和相关信息, 相关字段参见下文样例：
+* manifest.json 文件包含本APP的ID和相关信息, 相关字段参见下文样例：
 
 ```js
 {
-    "package_id"      : "com.modou.sample",       // 应用ID-必填字段
+    "package_id"      : "com.modou.sample",       // 应用ID
     "name"            : "welcome-page",           // 应用的名字
     "author"          : "魔豆开发团队",           // 应用作者
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
     "version"         : "0.1",                    // 当前应用版本
-    "os_version"      : "0.5.28"                  // 依赖的系统版本
     "release_date"    : "2014.08.08",             // 应用发布日期
     "icon"            : "./res/icon_111X111.png", // 图标文件
     "location"        : "external",               // 安装位置 (internal,external,both)
     "description"     : "这是一个样例",           // 应用的描述
     "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
 }
+```
+* extern_cmd.json 文件描述 init 脚本可接受的扩展命令, 相关字段参见下文样例：
+```js
+[
+  {
+    "action": "背光熄灭",                        // 类似于 Button Text 
+    "command_name": "rlease_backlight",          // 类似于 start, stop 这样的名字
+    "args": {                                    // 命令参数(e.g, init cmd Count=12 FileName="file")
+        {
+            "name": "FileName",
+            "type": "number"                     //参数类型 (number, string, boolean)
+        },
+        {
+            "name": "Count",
+            "type": "number"
+        }
+    }
+  },
+  {
+    "action": "背光长亮",
+    "command_name": "lock_backlight",
+    "args": {                                   // 参数可以是空的，即没有参数
+    }
+  }
+  ... 
+]
 ```
 
 
