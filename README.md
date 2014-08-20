@@ -62,7 +62,7 @@
         "action": "背光熄灭",
         "type": "command",
         "command_name": "rlease_backlight",
-        "args": [
+        "parameters": [
           {
             "name": "FileName",
             "type": "number"
@@ -72,13 +72,13 @@
             "type": "number"
           }
         ],
-        "ret_msgs": [
+        "result_messages": [
           {
-            "msg": "do command success",
+            "message": "do command success",
             "code": 0
           },
           {
-            "msg": "do command failure",
+            "message": "do command failure",
             "code": -1
           }
         ]
