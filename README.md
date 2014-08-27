@@ -46,7 +46,7 @@
     "os_version"      : "0.5.28",                 // 依赖的系统版本
     "release_date"    : "2014.08.08",             // 应用发布日期
     "icon"            : "./res/icon_111X111.png", // 图标文件
-    "location"        : "both",                   // 安装位置 (internal,external,both)
+    "location"        : "internal",               // 安装位置 (internal,external,both)
     "description"     : "这是一个样例",           // 应用的描述
     "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
 }
