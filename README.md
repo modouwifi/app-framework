@@ -19,10 +19,10 @@
 ./___
     |--init
     |--manifest.json
-    |--extern_cmd.json               // 可选的，没有扩展命令可以不提供这个文件
+    |--commands.json               // 可选的，扩展命令配置文件
 ```
 
-* init 必须接受以下命令。extern_cmd.json 文件中描述可接受的扩展命令。
+* `init` 必须接受以下命令。`commands.json` 文件中描述可接受的扩展命令。
 
 ```
     start       : 启动，实现启动本应用的操作
@@ -33,7 +33,7 @@
     uninstall   : 卸载，本应用被卸载前的一次性操作
 ```
 
-* manifest.json 文件包含本APP的ID和相关信息, 相关字段参见下文样例：
+* `manifest.json` 文件包含本APP的ID和相关信息, 相关字段参见下文样例：
 
 ```js
 {
@@ -51,18 +51,18 @@
     "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
 }
 ```
-* extern_cmd.json 文件描述 init 脚本可接受的扩展命令, 相关字段参见下文样例：
+* `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
 ```js
 [
   {
-    "action": "背光设置",
+    "name": "背光设置",
     "type": "group",
     "nodes": [
       {
-        "action": "背光熄灭",
+        "name": "背光熄灭",
         "type": "command",
-        "command_name": "rlease_backlight",
-        "parameters": [
+        "action": "rlease_backlight",
+        "args": [
           {
             "name": "FileName",
             "type": "number"
@@ -72,7 +72,7 @@
             "type": "number"
           }
         ],
-        "result_messages": [
+        "results": [
           {
             "message": "do command success",
             "code": 0
@@ -84,21 +84,21 @@
         ]
       },
       {
-        "action": "背光长亮",
+        "name": "背光长亮",
         "type": "command",
-        "command_name": "lock_backlight"
+        "action": "lock_backlight"
       }
     ]
   },
   {
-    "action": "开启背光",
+    "name": "开启背光",
     "type": "command",
-    "command_name": "backlight_on"
+    "action": "backlight_on"
   },
   {
-    "action": "关闭背光",
+    "name": "关闭背光",
     "type": "command",
-    "command_name": "backlight_off"
+    "action": "backlight_off"
   }
 ]
 ```
