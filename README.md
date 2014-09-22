@@ -148,14 +148,14 @@ Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 
 ## APP相关的扩展命令
 
 ### appInfo.sh 用于查询、设置APP相关的信息
-| 语法 | appInfo.sh &lt; get_status &lt;package_id&gt; &brvbar set_status &lt;package_id&gt; &lt;ISRUNNING &brvbar NOTRUNNING&gt;&gt; |||
-| ---- | --------------------------------------------------------------- |||
-| 参数 | 参数名                        |    意义                         ||
-| ---- | ----------------------------- | ------------------------------- ||
-|      | get_status &brvbar set_status | 命令                            ||
-|      | &lt;package_id&gt;            | 应用程序的包ID                  ||
-|      | ISRUNNING &brvbar NOTRUNNING  | 正在运行 & brvbar 不在运行      ||
-| ---------- | --------------------------------------------------------- |||
+| 语法 | appInfo.sh &lt; get_status &lt;package_id&gt; &brvbar set_status &lt;package_id&gt; &lt;ISRUNNING &brvbar NOTRUNNING&gt;&gt; | | |
+| ---- | --------------------------------------------------------------- | | |
+| 参数 | 参数名                        |    意义                         | |
+| ---- | ----------------------------- | ------------------------------- | |
+|      | get_status &brvbar set_status | 命令                            | |
+|      | &lt;package_id&gt;            | 应用程序的包ID                  | |
+|      | ISRUNNING &brvbar NOTRUNNING  | 正在运行 & brvbar 不在运行      | |
+| ---------- | --------------------------------------------------------- | | |
 | 命令       | 退出码 | 输出                |               意义         |
 | ---------- | ------ | ------------------- | -------------------------- |
 | get_status | 0      | ISRUNNING           | 该应用正在运行             |
