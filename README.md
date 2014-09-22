@@ -148,8 +148,7 @@ Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 
 ## APP相关的扩展命令
 
 ### appInfo.sh 用于查询、设置APP相关的信息
-| 语法 | appInfo.sh &lt; get_status &lt;package_id&gt;|set_status &lt;package_id&gt; &lt;ISRUNNING|NOTRUNNING&gt;&gt;|
-| ---- | --------------------------------------------------------------- |
+语法 : appInfo.sh &lt; get_status &lt;package_id&gt;|set_status &lt;package_id&gt; &lt;ISRUNNING|NOTRUNNING&gt;&gt;
 
 | 参数 | 参数名                        |    意义                         |
 | ---- | ----------------------------- | ------------------------------- |
@@ -162,7 +161,6 @@ Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 
 | get_status | 0      | ISRUNNING           | 该应用正在运行             |
 |            | 1      | NOTRUNNING          | 该应用不在运行             |
 |            | 2      | NOTFOUND            | 应用不存在或未找到         |
-
 | set_status | 0      | OK                  | 设置成功                   |
 |            | 1      | ERROR               | 设置失败                   |
 |            | 2      | PARAMETER MISSING   | 缺少参数                   |
