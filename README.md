@@ -152,9 +152,9 @@ Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 
 
 | 参数 | 参数名                        |    意义                         |
 | ---- | ----------------------------- | ------------------------------- |
-|      | get_status &brvbar set_status | 命令                            |
+|      | get_status, set_status        | 命令                            |
 |      | &lt;package_id&gt;            | 应用程序的包ID                  |
-|      | ISRUNNING &brvbar NOTRUNNING  | 正在运行 & brvbar 不在运行      |
+|      | ISRUNNING, NOTRUNNING         | 正在运行, 不在运行              |
 
 | 命令       | 退出码 | 输出                |               意义         |
 | ---------- | ------ | ------------------- | -------------------------- |
