@@ -161,6 +161,7 @@ Launcher 程序读取配置文件，显示 App Icon, 并且在用户点击 Icon 
 | get_status | 0      | ISRUNNING           | 该应用正在运行             |
 |            | 1      | NOTRUNNING          | 该应用不在运行             |
 |            | 2      | NOTFOUND            | 应用不存在或未找到         |
+|            | 3      | PARAMETER MISSING   | 缺少参数                   |
 | set_status | 0      | OK                  | 设置成功                   |
 |            | 1      | ERROR               | 设置失败                   |
 |            | 2      | PARAMETER MISSING   | 缺少参数                   |
