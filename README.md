@@ -130,22 +130,22 @@
 * `actions.json` 描述本应用支持或封装的命令，可供前端进行调用。样例如下：
 
 ```js
-[
-    {
+{
+  "command1" : {
       "id"      : "command1",                 // 应用的命令ID
       "is_sync" : true,                       // 是否需要同步阻塞执行,默认阻塞同步
       "input"   : "100",                      // 应用的命令参数
       "cmd"     : "./sbin/run_priv_cmd1",     // 应用的命令
       "relative": true                        // 应用的命令适用的是相对路径
     },
-    {
+  "command2" : {
       "id"      : "command2",                
       "is_sync" : true,                     
       "input"   : "",                      
       "cmd"     : "/bin/reboot", 
       "relative": false
     }
-]
+}
 ```
 
 * `*_views.json` 描述在屏幕、路由宝、浏览器中本应用所展示的视图，样例如下：
