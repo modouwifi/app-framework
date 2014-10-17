@@ -19,7 +19,13 @@
 ./___
     |--init
     |--manifest.json
-    |--commands.json               // 可选的，扩展命令配置文件
+    |--commands.json                // 可选的，扩展命令配置文件
+    |--conf/
+           |--data.json             // 应用的配置数据文件
+           |--actions.json          // 应用支持的命令操作
+           |--tp_views.json         // 屏幕上应用的视图定义文件
+           |--mobile_views.json     // 手机路由宝应用中，本应用的视图定义文件
+           |--web_views.json        // 浏览器中本应用的视图定义文件(暂不支持)
 ```
 
 * `init` 必须接受以下命令。`commands.json` 文件中描述可接受的扩展命令。
@@ -28,7 +34,7 @@
     start       : 启动，实现启动本应用的操作
     stop        : 停止， 停止本应用的操作
     status      : 查询状态，查询本应用的状态
-    config      : 配置， 对本应用进行配置
+    set_config  : 对本应用重新进行配置，生效配置数据应该进行的操作
     install     : 安装，本应用安装后的一次性操作
     uninstall   : 卸载，本应用被卸载前的一次性操作
 ```
@@ -103,6 +109,81 @@
 ]
 ```
 
+* `data.json` 描述本应用暴露出来可以进行配置修改的数据，样例如下：
+
+```js
+{
+  "id"      : "data1",                        // 配置数据的ID
+  "name"    : "username",                     // 配置数据的名字
+  "value"   : "middle",                       // 配置数据的值
+  "group_id": "group1",                       // 配置数据的组ID
+  "type"    : {
+                 "class" : "ENUM|BOOL|INT|STRING|FLOAT|SET",
+                 "items" : ["high", "middle", "low"],  // ENUM，SET适用
+                 "min"   : 0,                          // INT, FLOAT, STRING使用
+                 "max"   : 100,                        // INT, FLOAT, STRING使用
+                 "multiple" : true|false
+              }
+}
+```
+
+* `actions.json` 描述本应用支持或封装的命令，可供前端进行调用。样例如下：
+
+```js
+[
+    {
+      "id"      : "command1",                 // 应用的命令ID
+      "is_sync" : true,                       // 是否需要同步阻塞执行,默认阻塞同步
+      "input"   : "100",                      // 应用的命令参数
+      "cmd"     : "./sbin/run_priv_cmd1",     // 应用的命令
+      "relative": true                        // 应用的命令适用的是相对路径
+    },
+    {
+      "id"      : "command2",                
+      "is_sync" : true,                     
+      "input"   : "",                      
+      "cmd"     : "/bin/reboot", 
+      "relative": false
+    }
+]
+```
+
+* `*_views.json` 描述在屏幕、路由宝、浏览器中本应用所展示的视图，样例如下：
+
+```js
+mobile_views.json 
+{
+  "id"      : "view1",                        // 配置视图的ID
+  "name"    : "viewname",                     // 配置视图的名字
+  "data"    : [
+                {"id" : "data1",              // 视图需要展示的数据的ID
+                 "acess" : "RO|RW"            // 数据是否可修改
+                },
+                ...
+               ],
+  "menu"    : [                               // 主视图适用
+                  { "index"  : 1, 
+                    "text"   : "contract", 
+                    "type"   : "COMMAND|MENU|VIEW",
+                    "action" : actionid,      // COMMAND适用
+                    "input"  : data1,         // COMMAND适用
+                    "viewid" : viewid,        // VIEW适用
+                    "items"  : [              // MENU适用
+                                 {
+                                    "index"  : 1,
+                                    "text"   : "item1",
+                                    "type"   : "COMMAND|VIEW",
+                                    "action" : actionid, // COMMAND适用
+                                    "input"  : data1,    // COMMAND适用
+                                    "viewid" : viewid    // VIEW适用
+                                 },
+                                 ...
+                                ]
+                   },
+                   ...
+               ]
+}
+```
 
 ## 应用版本号规范
 
