@@ -41,17 +41,21 @@
 
 * `manifest.json` 文件包含本APP的ID和相关信息, 相关字段参见下文样例：
 
+    `package_id` 和 `name` 都是必填项且唯一的。
+
 ```js
 {
-    "package_id"      : "com.modou.sample",       // 应用ID-必填字段
-    "name"            : "welcome-page",           // 应用的名字
+    "package_id"      : "com.modou.sample",       // 应用ID             - 必填
+    "name"            : "welcome-page",           // 应用的名字         - 必填，仅支持 英文、数字
+    "display_name"    : "欢迎页面",               // 应用的显示名称     - 可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
     "author"          : "魔豆开发团队",           // 应用作者
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
     "version"         : "0.1",                    // 当前应用版本
     "os_version"      : "0.5.28",                 // 依赖的系统版本
     "release_date"    : "2014.08.08",             // 应用发布日期
-    "icon"            : "./res/icon_111X111.png", // 图标文件
+    "icon"            : "./res/icon_111X111.png", // 图标文件           - 可选，在 TP 上可以用它显示
+    "icon_url"        : "http://xxx.icon",        // 图标文件           - 可选，在 Web、Mobile 各端显示用
     "location"        : "internal",               // 安装位置 (internal,external,both)
     "description"     : "这是一个样例",           // 应用的描述
     "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
