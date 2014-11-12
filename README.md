@@ -26,6 +26,7 @@
            |--tp_views.json         // 屏幕上应用的视图定义文件
            |--mobile_views.json     // 手机路由宝应用中，本应用的视图定义文件
            |--web_views.json        // 浏览器中本应用的视图定义文件(暂不支持)
+    |--data/                        // 可选，用户数据目录，用于保存用户数据，应用升级时，不会被删除
 ```
 
 * `init` 必须接受以下命令。`commands.json` 文件中描述可接受的扩展命令。
@@ -58,7 +59,8 @@
     "icon_url"        : "http://xxx.icon",        // 图标文件           - 可选，在 Web、Mobile 各端显示用
     "location"        : "internal",               // 安装位置 (internal,external,both)
     "description"     : "这是一个样例",           // 应用的描述
-    "instruction"     : "1.xxxx; 2.xxxxx"         // 应用的安装或使用步骤指引
+    "instruction"     : "1.xxxx; 2.xxxxx",        // 应用的安装或使用步骤指引
+    "autostart"       : true                      // 应用自动启动       - 可选，true/false
 }
 ```
 * `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
