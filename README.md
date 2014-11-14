@@ -47,7 +47,7 @@
 ```js
 {
     "package_id"      : "com.modou.sample",       // 应用ID             - 必填
-    "name"            : "welcome-page",           // 应用的名字         - 必填，仅支持 英文、数字
+    "name"            : "welcome-page",           // 应用的名字         - 必填，仅支持 [0-9a-zA-Z\-\_]
     "display_name"    : "欢迎页面",               // 应用的显示名称     - 可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
     "author"          : "魔豆开发团队",           // 应用作者
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
