@@ -46,10 +46,11 @@
 
 ```js
 {
-    "package_id"      : "com.modou.sample",       // 应用ID            - 必填
-    "name"            : "app-framework",           // 应用的名字       - 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-zA-Z\-\_]
+    "package_id"      : "com.1234.app-backlight",       // 应用ID            - 必填，建议使用”com.” + author_forum_id + “.” + name
+    "name"            : “app-backlight",       // 应用的名字       - 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-zA-Z\-\_]
     "display_name"    : "欢迎页面",               // 应用的显示名称     - 可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
-    "author"          : "魔豆开发团队",           // 应用作者
+    "author"          : "魔豆开发团队",           // 应用作者的名字
+    "author_forum_id"     :     “1234”,          //应用作者的论坛id
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
     "version"         : "0.1",                    // 当前应用版本
@@ -60,7 +61,8 @@
     "location"        : "internal",               // 安装位置 (internal,external,both)
     "description"     : "这是一个样例",           // 应用的描述
     "instruction"     : "1.xxxx; 2.xxxxx",        // 应用的安装或使用步骤指引
-    "autostart"       : true                      // 应用自动启动       - 可选，true/false
+    "autostart"       : false,                      // 应用安装后立刻启动       - 可选，true/false，默认是false
+    "start_on_boot" :false                    //路由器重启后，应用自动开启，true/false，默认是false
 }
 ```
 * `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
