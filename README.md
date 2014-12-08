@@ -50,7 +50,7 @@
     "name"            : "app-backlight",       // 应用的名字       - 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-zA-Z\-\_]
     "display_name"    : "欢迎页面",               // 应用的显示名称     - 可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
     "author"          : "魔豆开发团队",           // 应用作者的名字
-    "author_forum_id"     :     “1234”,          //应用作者的论坛id
+    "author_forum_id" : "1234",          //应用作者的论坛id
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页
     "version"         : "0.1",                    // 当前应用版本
