@@ -62,7 +62,7 @@
     "description"     : "这是一个样例",           // 应用的描述
     "instruction"     : "1.xxxx; 2.xxxxx",        // 应用的安装或使用步骤指引
     "autostart"       : false,                      // 应用安装后立刻启动       - 可选，true/false，默认是false
-    "start_on_boot" :false                    //路由器重启后，应用自动开启，true/false，默认是false
+    "start_on_boot"   : false                    //路由器重启后，应用自动开启，true/false，默认是false
 }
 ```
 * `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
