@@ -46,23 +46,23 @@
 
 ```js
 {
-    "package_id"      : "com.1234.app-backlight",       // 应用ID            - 必填，建议使用”com.” + author_forum_id + “.” + name
-    "name"            : "app-backlight",       // 应用的名字       - 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-z\-\_]
-    "display_name"    : "欢迎页面",               // 应用的显示名称     - 可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
-    "author"          : "魔豆开发团队",           // 应用作者的名字
-    "author_forum_id" : "1234",          //应用作者的论坛id
-    "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱
-    "homepage"        : "www.modouwifi.com",      // 应用相关的网页
-    "version"         : "0.1",                    // 当前应用版本
-    "os_version"      : "0.5.28",                 // 依赖的系统版本
-    "release_date"    : "2014.08.08",             // 应用发布日期
-    "icon"            : "./res/icon_111X111.png", // 图标文件           - 可选，在 TP 上可以用它显示
-    "icon_url"        : "http://xxx.icon",        // 图标文件           - 可选，在 Web、Mobile 各端显示用
-    "location"        : "internal",               // 安装位置 (internal,external,both)
-    "description"     : "这是一个样例",           // 应用的描述
-    "instruction"     : "1.xxxx; 2.xxxxx",        // 应用的安装或使用步骤指引
-    "autostart"       : false,                      // 应用安装后立刻启动       - 可选，true/false，默认是false
-    "start_on_boot"   : false                    //路由器重启后，应用自动开启，true/false，默认是false
+    "package_id"      : "com.1234.app-backlight",       // 应用ID, 必填，建议使用”com.” + author_forum_id + “.” + name
+    "name"            : "app-backlight",       // 应用的名字, 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-z\-\_]
+    "display_name"    : "欢迎页面",               // 应用的显示名称。可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
+    "author"          : "魔豆开发团队",           // 应用作者的名字。必填
+    "author_forum_id" : "1234",          //应用作者的论坛id。必填
+    "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱。必填
+    "homepage"        : "www.modouwifi.com",      // 应用相关的网页。可选
+    "version"         : "0.1",                    // 当前应用版本。必填
+    "os_version"      : "0.5.28",                 // 依赖的系统版本。必填
+    "release_date"    : "2014.08.08",             // 应用发布日期。必填
+    "icon"            : "./res/icon_111X111.png", // 图标文件。必填，在 TP 上可以用它显示
+    "icon_url"        : "http://xxx.icon",        // 图标文件。可选，在 Web、Mobile 各端显示用
+    "location"        : "internal",               // 安装到的存储位置。必填。(internal: 路由器内部存储, external: USB外部存储, both: 两者皆可)
+    "description"     : "这是一个样例",           // 应用的描述。可选
+    "instruction"     : "1.xxxx; 2.xxxxx",        // 应用的安装或使用步骤指引。可选
+    "autostart"       : false,                      // 应用安装后立刻启动。可选，true/false，默认是false
+    "start_on_boot"   : false                    //路由器重启后，应用自动开启。可选，true/false，默认是false
 }
 ```
 * `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
