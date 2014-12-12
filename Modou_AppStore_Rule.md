@@ -1,3 +1,5 @@
+# 概述
+本文详细描述了应用商店的运作规则。
 # 应用商店详细规则
 ## 应用在商店中的整体流程
 1. App提交到BBS应用中心 http://bbs.modouwifi.cn/forum-47-1.html ，应用提交时指明是否上AppStore
