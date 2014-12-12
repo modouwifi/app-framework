@@ -46,10 +46,10 @@
 
 ```js
 {
-    "package_id"      : "com.1234.app-backlight",       // 应用ID, 必填，建议使用”com.” + author_forum_id + “.” + name
+    "package_id"      : "com.1234.app-backlight",       // 应用ID, 可选，会被系统替代成”com.” + author_forum_id + “.” + name
     "name"            : "app-backlight",       // 应用的名字, 必填，且必须与库名一致，必须全小写字母，“app-”开头，仅支持 [0-9a-z\-\_]
     "display_name"    : "欢迎页面",               // 应用的显示名称。可选，TP 程序可以用它显示；如果没有设置，默认使用 name 进行显示
-    "author"          : "魔豆开发团队",           // 应用作者的名字。必填
+    "author"          : "魔豆开发团队",           // 应用作者的名字。可选，会被系统自动替代成论坛用户名
     "author_forum_id" : "1234",          //应用作者的论坛id。必填
     "author_mail"     : "rd@mochui.net",          // 应用作者联系邮箱。必填
     "homepage"        : "www.modouwifi.com",      // 应用相关的网页。可选
