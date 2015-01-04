@@ -19,7 +19,6 @@
 ./___
     |--init
     |--manifest.json
-    |--commands.json                // 可选的，扩展命令配置文件
     |--conf/
            |--data.json             // 应用的配置数据文件
            |--actions.json          // 应用支持的命令操作
@@ -29,7 +28,7 @@
     |--data/                        // 应用运行时产生的目录，用户数据目录，用于保存用户数据，应用升级时，不会被删除
 ```
 
-* `init` 必须接受以下命令。`commands.json` 文件中描述可接受的扩展命令。
+* `init` 必须接受以下命令。
 
 ```
     start       : 启动，实现启动本应用的操作
@@ -65,58 +64,6 @@
     "start_on_boot"   : false                    //路由器重启后，应用自动开启。可选，true/false，默认是false
 }
 ```
-* `commands.json` 文件描述 `init` 脚本可接受的扩展命令, 相关字段参见下文样例：
-```js
-[
-  {
-    "name": "背光设置",
-    "type": "group",
-    "nodes": [
-      {
-        "name": "背光熄灭",
-        "type": "command",
-        "action": "rlease_backlight",
-        "args": [
-          {
-            "name": "FileName",
-            "type": "number"
-          },
-          {
-            "name": "Count",
-            "type": "number"
-          }
-        ],
-        "results": [
-          {
-            "message": "do command success",
-            "code": 0
-          },
-          {
-            "message": "do command failure",
-            "code": -1
-          }
-        ]
-      },
-      {
-        "name": "背光长亮",
-        "type": "command",
-        "action": "lock_backlight"
-      }
-    ]
-  },
-  {
-    "name": "开启背光",
-    "type": "command",
-    "action": "backlight_on"
-  },
-  {
-    "name": "关闭背光",
-    "type": "command",
-    "action": "backlight_off"
-  }
-]
-```
-
 * `data.json` 描述本应用暴露出来可以进行配置修改的数据，样例如下：
 
 ```js
